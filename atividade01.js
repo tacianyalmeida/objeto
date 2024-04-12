@@ -8,17 +8,21 @@ const aceitaId = (idDalinha) => {
      console.log(linha)
 
     if(linha) {
-        const horarios = linha.horarios.map((horarios) => {
-            return `Saída: ${horarios.saída}, Chegada: ${horarios.chegada}`;
+        const horarios = linha.horarios.map((horario) => {
+            return `Saída: ${horario.saida}, Chegada: ${horario.chegada}`;
         });
         return horarios.join('\n')
+        return horarios
     }else{
         return {message: "Não foi encontrada uma linha"};
     }
 };
 
-const id = ("") //ou id = 1 ? 
+const id = 1 // apenas para determinar a linha que eu quero acessar 
 const horarioDasLinhas = aceitaId(id)
 console.log(horarioDasLinhas)
+
+
+// correção 
 
 
